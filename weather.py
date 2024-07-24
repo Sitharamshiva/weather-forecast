@@ -4,14 +4,14 @@ import pandas as pd
 import pickle
 
 #Loading the file
-df=pd.read_csv(r"C:\Users\shiva\Downloads\archive (2)\weather_classification_data.csv")
+df=pd.read_csv(r"weather_classification_data.csv")
 
 #Logo and Title
-st.image(r"C:\Users\shiva\Downloads\inno image.jpeg")
+st.image(r"inno image.jpeg")
 st.title("Weather ForeCast")
 
 #Loading Pickle file
-model = pickle.load(open(r"C:\Users\shiva\dt.pkl","rb"))
+model = pickle.load(open(r"dt.pkl","rb"))
 
 
 #Columns
@@ -47,16 +47,16 @@ if st.button("Predict the Weather Type"):
     if predicted=="Rainy":
         st.write("Hey it's Rainy")
         st.write("plz carry a Umbrella")
-        st.image(r"C:\Users\shiva\Streamlit_elite_20\streamlit\rainyyy.png")
+        st.image(r"rainyyy.png")
     elif predicted=="Cloudy":
         st.write("oh it's Cloudy")
         st.write("stay at home")
-        st.image(r"C:\Users\shiva\Streamlit_elite_20\streamlit\cloudyy.jpg")
+        st.image(r"cloudyy.jpg")
     elif predicted=="Sunny":
         st.write("its a Brightday")
         st.write("Lets Play")
-        st.image(r"C:\Users\shiva\Streamlit_elite_20\streamlit\sunny.png")
+        st.image(r"sunny.png")
     elif predicted=="Snowy":
         st.write(" Snowy outside")
         st.write("lets make Snowman")
-        st.image(r"C:\Users\shiva\Streamlit_elite_20\streamlit\snowyyy.png")
+        st.image(r"snowyyy.png")
